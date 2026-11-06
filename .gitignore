@@ -1,0 +1,14 @@
+/node_modules
+/.next/
+/out/
+/build
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+.env
+.env*.local
+
+# Pinpoint's own data: reports, reviewer names and screenshots. Never commit.
+data.db
+data.db-*
+/public/uploads/
