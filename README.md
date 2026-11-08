@@ -11,26 +11,26 @@
 
 Pinpoint is a side drawer for reviewing a web app while it runs. A reviewer clicks the button in the corner, points at the thing that's wrong, says what's wrong, and optionally adds a screenshot. The report is saved with the page and the exact element it's about. Anyone can click it later to jump straight to that element, outlined on the page.
 
-```
-  Your app, running on staging
-  ┌──────────────────────────────────────────────┬──────────────────────┐
-  │                                              │ Pinpoint             │
-  │   Team settings          [ Invite memebers ] │ ◎ Inspect Element    │
-  │                          └─ - - - - - - - ┘  │                      │
-  │                                              │ Button "Invite me…"  │
-  │   Seats used   Pending    Plan               │ ┌──────────────────┐ │
-  │   3 / 5        1          Pro                │ │ Typo: "memebers" │ │
-  │                                              │ └──────────────────┘ │
-  │                                              │ 📎  [ Save Comment ] │
-  │                                              │                      │
-  │                                              │ Recent feedback      │
-  │                                              │ Sam · 2 min ago      │
-  │                                              │ Status should be     │
-  │                                              │ Active, sync done    │
-  └──────────────────────────────────────────────┴──────────────────────┘
-```
+<p align="center">
+  <img src="assets/demo/pinpoint-demo.gif" alt="Picking the Invite button in the demo app, filing a typo report, then clicking the report to outline the button again" width="960">
+</p>
 
 It's built for the team reviewing an app (designers, QA, product, clients on a staging link), not for end users.
+
+---
+
+## Try it
+
+Needs Node.js 20 or later.
+
+```bash
+git clone https://github.com/Pilotree-ai/pinpoint.git
+cd pinpoint
+npm install
+npm run dev          # http://localhost:3050
+```
+
+Open the home page and go to the **demo page**. It has a few deliberate mistakes to report.
 
 ---
 
@@ -53,21 +53,6 @@ Pinpoint keeps the feedback on the page it's about. Every report knows its page 
 3. **Point at the problem (optional).** Click **Inspect Element**, move over the page (elements are outlined as you go), and click the one that's wrong. Skip this for a general comment about the page.
 4. **Describe it.** Type what's wrong, attach a screenshot with the paperclip if it helps, and click **Save Comment**.
 5. **Review.** **Recent Feedback** lists every report for the current page, newest first. Click one tied to an element to scroll to it and outline it with a red dashed box.
-
----
-
-## Try it
-
-Needs Node.js 20 or later.
-
-```bash
-git clone https://github.com/Pilotree-ai/pinpoint.git
-cd pinpoint
-npm install
-npm run dev          # http://localhost:3050
-```
-
-Open the home page and go to the **demo page**. It has a few deliberate mistakes to report.
 
 ---
 
